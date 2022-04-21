@@ -18,10 +18,7 @@ const setBlog = asyncHandler(async (req, res) => {
         res.status(400)
         throw new Error( 'please add a body field')
     }
-    if (!req.body.postdate){
-        res.status(400)
-        throw new Error( 'please add a date field')
-    }
+    
     if (!req.body.postedby){
         res.status(400)
         throw new Error( 'please add a postedby field')
