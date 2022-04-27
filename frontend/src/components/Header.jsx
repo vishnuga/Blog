@@ -13,15 +13,15 @@ function Header() {
             <a className="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Articles</a>
+            <a className="nav-link" href="#">Events</a>
             </li>
           <li className="nav-item">
-            <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Connexion</a>
+            <a className="nav-link disabled" href="#" >New</a>
           </li>
         </ul>
         <form className="d-flex">
-          <input className="form-control me-2" type="search" placeholder="Rechercher article" aria-label="Search" />
-          <button className="btn btn-outline-success" type="submit">Rechercher</button>
+          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button className="btn btn-outline-success" type="submit">Events</button>
         </form>
       </div>
     </div>
