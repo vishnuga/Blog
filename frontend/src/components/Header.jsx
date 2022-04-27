@@ -10,13 +10,13 @@ function Header() {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">Home</a>
+            <a className="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Events</a>
+            <a className="nav-link" href="#">Images</a>
             </li>
           <li className="nav-item">
-            <a className="nav-link disabled" href="#" >New</a>
+            <a className="nav-link " href="/createblog">create blog</a>
           </li>
         </ul>
         <form className="d-flex">

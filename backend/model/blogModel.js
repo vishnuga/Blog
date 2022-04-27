@@ -10,10 +10,6 @@ const blogSchema = mongoose.Schema(
         type: String,
         required: [true, 'please add body of blog'],
     },
-    postedby: {
-        type: String,
-        required: [true, 'please add posted by'],
-    },
     
 },
     {

@@ -18,17 +18,9 @@ const setBlog = asyncHandler(async (req, res) => {
         res.status(400)
         throw new Error( 'please add a body field')
     }
-    
-    if (!req.body.postedby){
-        res.status(400)
-        throw new Error( 'please add a postedby field')
-    }
  const blogs = await Blog.create({
      title: req.body.title,
      body: req.body.body,
-     postdate: req.body.postdate,
-     postedby: req.body.postedby,
-
  })
  
     res.status(200).json(blogs)

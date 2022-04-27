@@ -1,6 +1,6 @@
 import axios from '../axios'
 import { useState, useEffect } from 'react'
-
+import { Link } from 'react-router-dom'
 function Blogpage() {
 
   const [blogs, setBlogs] = useState([])
@@ -18,27 +18,30 @@ function Blogpage() {
   
     <div className="container">
     <div className="row">
-    <div className="col-md-8">
+    <div className="col-md-20">
 
-     { blogs.map((blog,i) => {
+      {blogs.map((blog,i) => {
         return (
           <div key={i}>
             <div className="card mb-3">
             <div className="card-body">
-              <h1 className="blog-title">{blog.title}</h1>
+              <Link to={`/singleblog/${blog._id}`}><h1 className="blog-title">{blog.title}</h1></Link>
               <p className="blog-text">{blog.body}</p>
-              <p className="blog-text">{blog.postedby}</p>
+              <p className="blog-text">postedby:{blog.postedby}</p>
+              
             </div>
             </div>
          </div>
         )
-      })
-    }
+       })
+     }
       </div>
-      </div>
-      </div>
+      
+      
     
-  );
+  </div>
+  </div>
+    );
 
   
 
