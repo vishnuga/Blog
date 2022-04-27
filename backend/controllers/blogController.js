@@ -1,10 +1,18 @@
 const asyncHandler = require('express-async-handler')
 const blogModel = require('../model/blogModel')
 const Blog = require('../model/blogModel')
+const Blogs = require('../model/blogModel')
 
 // get blogs
-const getBlog = asyncHandler(async (req, res) => { 
+const getBlogs = asyncHandler(async (req, res) => { 
     const blogs = await Blog.find()
+    res.status(200).json(blogs)
+})
+
+//get single blog
+const getBlog = asyncHandler(async (req, res) => { 
+    const blogs = await Blog.findById(req.params.id)
+
     res.status(200).json(blogs)
 })
 
@@ -61,6 +69,7 @@ const deleteBlog =asyncHandler( async (req, res) => {
 
 module.exports = {
     getBlog, 
+    getBlogs,
     setBlog,
     updateBlog,
     deleteBlog,
