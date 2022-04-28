@@ -1,7 +1,11 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import axios from '../axios'
 
 function CreateBlogPage() {
+
+  const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         title:'',
         body:'',
@@ -34,7 +38,13 @@ function CreateBlogPage() {
         .catch(function (error) {
           console.log(error);
         })
-      
+
+        setFormData({
+          title:'',
+          body:'',
+        })
+        
+        navigate("/")
     }
 
 
