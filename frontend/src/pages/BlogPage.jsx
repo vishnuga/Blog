@@ -27,7 +27,7 @@ function Blogpage() {
             <div className="card-body">
               <Link to={`/singleblog/${blog._id}`}><h1 className="blog-title">{blog.title}</h1></Link>
               <p className="blog-text">{blog.body}</p>
-              <p className="blog-text">postedby:{blog.postedby}</p>
+              
               
             </div>
             </div>

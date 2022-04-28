@@ -21,6 +21,7 @@ function SingleBlogpage() {
    <>
    <div className="h2">{blog.title}</div>
    <p>{blog.body}</p>
+   <button type="submit" className="btn btn-primary">Register this event</button>
    </>
   )
 }
