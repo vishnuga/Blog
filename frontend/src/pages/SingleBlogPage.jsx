@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import axios from "../axios";
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom'
 
 function SingleBlogpage() {
    const params = useParams()
@@ -17,12 +18,16 @@ function SingleBlogpage() {
         console.log(error.response.data);
       });
   }, []);
+
+
   return (
    <>
    <div className="h2">{blog.title}</div>
    <p>{blog.body}</p>
-   
+   <Link to={`/updateblog/${blog._id}`}><button type="button"  >Update Post</button></Link>
+  
    </>
+   
   )
 }
 

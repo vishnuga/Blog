@@ -12,8 +12,8 @@ function Blogpage() {
       console.log(error.response.data)
     })
   }, []);
-  console.log(blogs)
-
+  //console.log(blogs)
+  
   return (
   
     <div className="container">
@@ -27,7 +27,6 @@ function Blogpage() {
             <div className="card-body">
               <Link to={`/singleblog/${blog._id}`}><h1 className="blog-title">{blog.title}</h1></Link>
               <p className="blog-text">{blog.body}</p>
-              
               
             </div>
             </div>
