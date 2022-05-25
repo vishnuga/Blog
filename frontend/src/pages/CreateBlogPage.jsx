@@ -12,6 +12,7 @@ function CreateBlogPage() {
         
     });
     
+    
     const { title, body } = formData
 
     const onChange = (e) =>{

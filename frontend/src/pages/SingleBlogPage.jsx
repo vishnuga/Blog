@@ -24,7 +24,7 @@ function SingleBlogpage() {
    <>
    <div className="h2">{blog.title}</div>
    <p>{blog.body}</p>
-   <Link to={`/updateblog/${blog._id}`}><button type="button"  >Update Post</button></Link>
+   <Link to={`/updateblog/${blog._id}`}><button type="button" >Update Post</button></Link>
   
    </>
    
